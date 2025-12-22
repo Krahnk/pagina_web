@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   cursor = document.getElementById("cursor");
 
   document.addEventListener("mousemove", (e) => {
-    X += (e.clientX - X) * 0.05;
-    Y += (e.clientY - Y) * 0.05;
+    X += (e.clientX - X) * 0.005;
+    Y += (e.clientY - Y) * 0.005;
 
     cursor.style.left = X + "px";
     cursor.style.top  = Y + "px";
