@@ -6,8 +6,8 @@ function evento1() {
 }
 
 document.addEventListener("mousemove", (e) => {
-    X += (e.clientX - X ) * 0.1;
-    Y += (e.clientY - Y ) * 0.1;
+    X += (e.clientX - X ) * 0.5;
+    Y += (e.clientY - Y ) * 0.5;
   cursor.style.left = X + "px";
   cursor.style.top = Y + "px";
 });
