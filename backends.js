@@ -1,5 +1,8 @@
 const cursor = document.getElementById("cursor");
 
+let X = 0;
+let Y = 0;
+
 function evento1() {
   document.getElementById("mensaje").innerHTML = "Eso fue genial.. No?";
   cursor.style.display = "block"; 
