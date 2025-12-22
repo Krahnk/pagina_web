@@ -1,4 +1,4 @@
 function evento1() {
-  alert("The button was clicked!");
+  alert("lo apretaste!!");
   document.getElementById("mensaje").innerHTML = "Eso fue genial.. No?";
 }
