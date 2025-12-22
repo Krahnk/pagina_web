@@ -29,8 +29,8 @@ p {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: red;
-  border-radius: 50%;
+  background-image: url("bubble.png");
+  background-size: cover;
   pointer-events: none;
   display: none;
 }
