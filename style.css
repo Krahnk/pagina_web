@@ -35,3 +35,10 @@ p {
   display: none;
   transform: translate(-50%, -50%);
 }
+
+audio {
+  width: 100%; /* Ocupa todo el ancho */
+  border-radius: 10px; /* Esquinas redondeadas */
+  background-color: #b2ffff;
+  padding: 10px;
+}
