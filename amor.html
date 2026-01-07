@@ -4,15 +4,38 @@
   <title>Mi pagina</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main>
-<h1>hola zow <3</h1>
-  <p>si llegaste hasta acá, es porque estoy paveando pensando en vos</p>
+    <h1>hola zow <3</h1>
+    <p>si llegaste hasta acá, es porque estoy paveando pensando en vos</p>
     <button onclick="location.href='index.html'">Ir a mi web</button>
-    <audio controls loop>
-      <source src="musica/YLIA.mp3" type="audio/mpeg">
-      <source src="musica/YourName.mp3" type="audio/mpeg">
-      <source src="musica/DandelionsSong.mp3" type="audio/mpeg">
-    </audio>
+
+    <audio controls id="audioPlayer"></audio>
+
+    <script>
+      const canciones = [
+        "musica/YLIA.mp3",
+        "musica/YourName.mp3",
+        "musica/DandelionsSong.mp3"
+      ];
+
+      let index = 0;
+      const player = document.getElementById("audioPlayer");
+
+      function cargarCancion(i) {
+        player.src = canciones[i];
+        player.play();
+      }
+
+      player.addEventListener("ended", () => {
+        index = (index + 1) % canciones.length;
+        cargarCancion(index);
+      });
+
+      cargarCancion(index);
+    </script>
   </main>
 </body>
+
+</html>
