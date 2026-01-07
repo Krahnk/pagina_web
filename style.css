@@ -37,8 +37,10 @@ p {
 }
 
 audio {
-  width: 100%; /* Ocupa todo el ancho */
-  border-radius: 10px; /* Esquinas redondeadas */
-  background-color: #b2ffff;
+  width: 100%;
+  border-radius: 10px;
+  background: transparent;
   padding: 10px;
+  backdrop-filter: blur(0px); 
 }
+
