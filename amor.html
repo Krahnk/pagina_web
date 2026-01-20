@@ -1,41 +1,71 @@
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Mi pagina</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#ff0080">
+    <link rel="icon" type="image/jpg" href="fotos z/WhatsApp Image 2022-12-16 at 16.47.17.jpeg">
+    <title>romantik</title>
+    
+    <link rel="stylesheet" href="AmorStyle.css">
+  </head>
+  
+  <body>
+    
+    <video autoplay loop muted playsinline class="video-bg">
+      <source src="videos/AmorFondo.mp4" type="video/mp4">
+    </video>
+    
+    <button onclick="location.href='index.html'">
+      Ir a mi web
+    </button>
+    
+  <div class="overlay"></div>
 
-<body>
+
+  <main class="content">
+
     <audio controls id="audioPlayer"></audio>
-  <main>
-    <h1>hola zow <3</h1>
-    <p>si llegaste hasta acá, es porque estoy paveando pensando en vos</p>
-    <button onclick="location.href='index.html'">Ir a mi web</button>
+
+    <h1>hola zow</h1>
+    <h4>Si llegaste hasta acá, es porque estoy paveando pensando en vos</h4>
+
+    <p class="poema">Hoy el Sol se escondió y no quiso salir <br>
+      Te vio despertar y le dio miedo de morir <br>
+      Abriste los ojos y el Sol guardó su pincel <br>
+      Porque tú pintas el paisaje mejor que él</p>
+
+    <img 
+      src="fotos z/WhatsApp Image 2022-12-16 at 16.47.17.jpeg" 
+      alt="una foto con amor de mi vida"
+      title="zow"
+      width="150"
+    >
 
 
-    <script>
-      const canciones = [
-        "musica/YourName.mp3",
-        "musica/YLIA.mp3",
-        "musica/DandelionsSong.mp3"
-      ];
-
-      let index = 0;
-      const player = document.getElementById("audioPlayer");
-
-      function cargarCancion(i) {
-        player.src = canciones[i];
-        player.play();
-      }
-
-      player.addEventListener("ended", () => {
-        index = (index + 1) % canciones.length;
-        cargarCancion(index);
-      });
-
-      cargarCancion(index);
-    </script>
   </main>
-</body>
 
+  <script>
+    const canciones = [
+      "musica/DandelionsSong.mp3",
+      "musica/YourName.mp3"
+    ];
+
+    let index = 0;
+    const player = document.getElementById("audioPlayer");
+
+    function cargarCancion(i) {
+      player.src = canciones[i];
+      player.play();
+    }
+
+    player.addEventListener("ended", () => {
+      index = (index + 1) % canciones.length;
+      cargarCancion(index);
+    });
+
+    cargarCancion(index);
+  </script>
+
+</body>
 </html>
